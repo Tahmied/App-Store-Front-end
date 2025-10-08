@@ -490,6 +490,23 @@ header {
     color: #627382;
 }
 
+.apps-tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.app-count {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    color: #001931;
+}
+
 /* footer */
 
 footer {
