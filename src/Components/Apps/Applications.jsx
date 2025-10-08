@@ -48,7 +48,7 @@ const Applications = () => {
                 <div className="trending-container">
                     {
                         appsArr.map(app => {
-                            return <AppCard key={app.id} name={app.title} image={app.image} downloads={app.downloads} ratings={app.ratingAvg}></AppCard>
+                            return <AppCard id={app.id} key={app.id} name={app.title} image={app.image} downloads={app.downloads} ratings={app.ratingAvg}></AppCard>
                         })
                     }
                 </div>
