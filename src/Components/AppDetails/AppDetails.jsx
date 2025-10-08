@@ -1,5 +1,6 @@
 import { use } from "react";
 import { useParams } from "react-router";
+import AppNotFound from "./AppNotFound";
 import RatingsChart from "./Ratingchart";
 
 const apps = fetch('/data.json').then((data)=>data.json())
@@ -34,6 +35,13 @@ const AppDetails = () => {
     const appId = useParams()
     const allApps = use(apps)
     let appToShow = findAppById(allApps, appId.appid)
+    if(!appToShow) {
+        return <AppNotFound></AppNotFound>
+    }
+    
+    if(!Number.isInteger(Number(appId.appid))) {
+        return <AppNotFound></AppNotFound>
+    }
     console.log(appToShow)
     return (
         <>

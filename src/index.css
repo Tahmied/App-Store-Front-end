@@ -672,6 +672,71 @@ header {
     padding-top: 1rem;
 }
 
+/* 404 page */
+.app-not-found-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem auto;
+}
+
+.app-not-found-img {
+    width: 30%;
+}
+
+.not-found-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.012em;
+    color: #001931;
+}
+
+.not-found-desc {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #627382;
+}
+
+.back-btn-not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 10px;
+    width: 150px;
+    height: 48px;
+    background: linear-gradient(125.04deg, #632EE3 5.68%, #9F62F2 88.38%);
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+}
+
+.back-btn-not-found:hover {
+    transform: translateY(-5px);
+}
+
 /* footer */
 
 footer {
