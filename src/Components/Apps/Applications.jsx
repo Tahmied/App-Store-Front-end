@@ -1,25 +1,23 @@
-import { use } from "react";
+import { use, useState } from "react";
 import styled from 'styled-components';
 import AppCard from "../AppCard";
-
 
 const appData = fetch('/data.json').then((res) => res.json())
 
 function filterAppsByTitle(apps, searchTerm) {
-  if (!searchTerm.trim()) return apps; 
-  const lower = searchTerm.toLowerCase();
-  return apps.filter(app => app.title.toLowerCase().includes(lower));
+    if (!searchTerm.trim()) return apps;
+    const lower = searchTerm.toLowerCase();
+    return apps.filter(app => app.title.toLowerCase().includes(lower));
 }
-
-function searchApps(searchTitle){
-    console.log(`You typed ${searchTitle}`)
-}
-
 
 const Applications = () => {
     const apps = use(appData)
-    
-    filterAppsByTitle(apps, 'Gm') 
+    const [appsArr, setApps] = useState(() => apps)
+
+    function searchApps(allApps, searchTitle) {
+        const filteredApps = filterAppsByTitle(allApps, searchTitle)
+        setApps(filteredApps)
+    }
 
     return (
         <>
@@ -27,7 +25,7 @@ const Applications = () => {
                 <div className="apps-tools">
                     <p className="app-count">{apps.length} Apps Found</p>
                     <StyledWrapper>
-                        <form onChange={(e)=>{searchApps(e.target.value)}} className="form">
+                        <form onChange={(e) => { searchApps(apps, e.target.value) }} className="form">
                             <label htmlFor="search">
                                 <input required autoComplete="off" placeholder="Search Apps" id="search" type="text" />
                                 <div className="icon">
@@ -49,7 +47,7 @@ const Applications = () => {
                 </div>
                 <div className="trending-container">
                     {
-                        apps.map(app => {
+                        appsArr.map(app => {
                             return <AppCard key={app.id} name={app.title} image={app.image} downloads={app.downloads} ratings={app.ratingAvg}></AppCard>
                         })
                     }
