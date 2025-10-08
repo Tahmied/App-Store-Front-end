@@ -553,6 +553,10 @@ header {
     width: 350px;
 }
 
+.app-details-icon {
+    width: fit-content;
+}
+
 .app-name-title {
     font-family: 'Inter';
     font-style: normal;
