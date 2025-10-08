@@ -2,7 +2,7 @@ import { use } from "react";
 import { Link } from "react-router";
 import AppCard from "../AppCard";
 
-const appData = fetch('https://raw.githubusercontent.com/Tahmied/test-data/refs/heads/main/index.json').then((res)=> res.json())
+const appData = fetch('/data.json').then((res)=> res.json())
 
 const Trending = () => {
     const apps = use(appData)

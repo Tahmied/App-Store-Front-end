@@ -3,17 +3,31 @@ import styled from 'styled-components';
 import AppCard from "../AppCard";
 
 
-const appData = fetch('https://raw.githubusercontent.com/Tahmied/test-data/refs/heads/main/index.json').then((res) => res.json())
+const appData = fetch('/data.json').then((res) => res.json())
+
+function filterAppsByTitle(apps, searchTerm) {
+  if (!searchTerm.trim()) return apps; 
+  const lower = searchTerm.toLowerCase();
+  return apps.filter(app => app.title.toLowerCase().includes(lower));
+}
+
+function searchApps(searchTitle){
+    console.log(`You typed ${searchTitle}`)
+}
+
 
 const Applications = () => {
     const apps = use(appData)
+    
+    filterAppsByTitle(apps, 'Gm') 
+
     return (
         <>
             <section className="all-applications">
                 <div className="apps-tools">
                     <p className="app-count">{apps.length} Apps Found</p>
                     <StyledWrapper>
-                        <form className="form">
+                        <form onChange={(e)=>{searchApps(e.target.value)}} className="form">
                             <label htmlFor="search">
                                 <input required autoComplete="off" placeholder="Search Apps" id="search" type="text" />
                                 <div className="icon">
