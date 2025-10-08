@@ -507,6 +507,137 @@ header {
     color: #001931;
 }
 
+.description-heading {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    color: #001931;
+}
+
+.description-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #627382;
+    margin-bottom: 2rem;
+}
+
+.app-details-description {
+    max-width: 1300px;
+    margin: 0 auto
+}
+
+.description-heading {
+    margin-bottom: 1rem;
+}
+
+/* app detail page */
+
+.app-details-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 1300px;
+    margin: 2rem auto;
+}
+
+.app-details-right {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.app-details-icon-img {
+    box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+.app-name-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: capitalize;
+    color: #001931;
+}
+
+.app-developed-by {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #627382;
+}
+
+.company-developer {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    background: linear-gradient(125.04deg, #632EE3 5.68%, #9F62F2 88.38%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.app-details-states {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.downloads-states {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-install-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 20px;
+    gap: 10px;
+    width: 239px;
+    height: 52px;
+    background: #00D390;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.download-detail-tag {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #001931;
+    opacity: 0.8;
+}
+
+.download-detail-num {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    text-transform: capitalize;
+    color: #001931;
+}
+
 /* footer */
 
 footer {

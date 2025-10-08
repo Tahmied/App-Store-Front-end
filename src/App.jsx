@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import './App.css'
+import AppDetails from './Components/AppDetails/AppDetails'
 import Apps from './Components/Apps/Apps'
 import Home from './Components/Homepage/Home'
 import Installation from './Components/Installation/Installation'
@@ -16,10 +17,13 @@ function App() {
           index:true, Component: Home
         },
         {
-          path: '/apps', Component: Apps
+          path: 'apps', Component: Apps
         },
         {
-          path: '/installation', Component: Installation
+          path: 'installation', Component: Installation
+        },
+        {
+          path: 'app/:appid', Component : AppDetails
         }
       ]
     }

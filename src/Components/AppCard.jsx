@@ -9,7 +9,7 @@ const AppCard = ({image, name, downloads, ratings}) => {
                     <img src="/assets/icon-downloads.png" alt="" className="download-icon" /> {downloads}
                 </div>
                 <div className="app-ratings">
-                    <img src="/public/assets/icon-ratings.png" alt="" className="rating-icon" /> {ratings}
+                    <img src="/assets/icon-ratings.png" alt="" className="rating-icon" /> {ratings}
                 </div>
             </div>
         </div>
