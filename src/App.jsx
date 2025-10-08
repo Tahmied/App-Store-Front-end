@@ -24,8 +24,6 @@ function App() {
       ]
     }
   ])
-
-  // routes will be here
   
   return (
     <>
