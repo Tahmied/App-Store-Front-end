@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import './App.css'
 import AppDetails from './Components/AppDetails/AppDetails'
 import Apps from './Components/Apps/Apps'
+import Errorpage from './Components/ErrorPage'
 import Home from './Components/Homepage/Home'
 import Installation from './Components/Installation/Installation'
 import Root from './Components/Root'
@@ -14,7 +15,7 @@ function App() {
       Component: Root,
       children: [
         {
-          index:true, Component: Home
+          index: true, Component: Home
         },
         {
           path: 'apps', Component: Apps
@@ -23,15 +24,18 @@ function App() {
           path: 'installation', Component: Installation
         },
         {
-          path: 'app/:appid', Component : AppDetails
+          path: 'app/:appid', Component: AppDetails
+        },
+        {
+          path: '*', Component: Errorpage
         }
       ]
-    }
+    },
   ])
-  
+
   return (
     <>
-    <RouterProvider router={router}></RouterProvider>
+      <RouterProvider router={router}></RouterProvider>
     </>
   )
 }
