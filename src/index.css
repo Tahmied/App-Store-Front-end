@@ -280,6 +280,121 @@ header {
     color: #FFFFFF;
 }
 
+/* trending section */
+
+.trending {
+    padding: 2rem 0 2rem 0;
+}
+
+.trending-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #001931;
+}
+
+.trending-description {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #627382;
+}
+
+.trending-container {
+    max-width: 1300px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.app-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    gap: 16px;
+    background: #FFFFFF;
+    border-radius: 4px;
+}
+
+.app-image {
+    background: #D9D9D9;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.app-name {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: capitalize;
+    color: #001931;
+}
+
+.app-states {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.download-icon , .rating-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.app-downloads , .app-ratings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.app-downloads {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 10px;
+    gap: 8px;
+    background: #F1F5E8;
+    border-radius: 4px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: capitalize;
+    color: #00D390;
+}
+
+.app-ratings {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 10px;
+    gap: 8px;
+    background: #FFF0E1;
+    border-radius: 4px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #FF8811;
+}
+
+
 /* apps page */
 
 .app-hero {
