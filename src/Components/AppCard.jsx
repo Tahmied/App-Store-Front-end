@@ -1,15 +1,15 @@
 
-const AppCard = () => {
+const AppCard = ({image, name, downloads, ratings}) => {
     return (
         <div className="app-card">
-            <img src="/public/assets/demo-app (2).webp" alt="" className="app-image" />
-            <p className="app-name">Forest: Focus for Productivity</p>
+            <img src={image} alt="" className="app-image" />
+            <p className="app-name">{name}</p>
             <div className="app-states">
                 <div className="app-downloads">
-                    <img src="/assets/icon-downloads.png" alt="" className="download-icon" /> 9M
+                    <img src="/assets/icon-downloads.png" alt="" className="download-icon" /> {downloads}
                 </div>
                 <div className="app-ratings">
-                    <img src="/public/assets/icon-ratings.png" alt="" className="rating-icon" /> 5
+                    <img src="/public/assets/icon-ratings.png" alt="" className="rating-icon" /> {ratings}
                 </div>
             </div>
         </div>

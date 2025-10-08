@@ -311,6 +311,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem;
+    width: 80%;
 }
 
 .app-card {
@@ -322,6 +323,12 @@ header {
     gap: 16px;
     background: #FFFFFF;
     border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
 }
 
 .app-image {
@@ -392,6 +399,27 @@ header {
     font-size: 16px;
     text-transform: capitalize;
     color: #FF8811;
+}
+
+@media (max-width: 1024px) {
+    .trending-container {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 1rem; 
+    }
+}
+
+@media (max-width: 768px) {
+    .trending-container {
+        grid-template-columns: 1fr;
+    }
+
+    .trending-title {
+        font-size: 36px;
+    }
+
+    .trending-description {
+        font-size: 18px;
+    }
 }
 
 

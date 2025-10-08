@@ -1,5 +1,10 @@
+import { Suspense, use } from "react";
+import AppCard from "../AppCard";
+
+const appData = fetch('/data.json').then((res)=> res.json())
 
 const Trending = () => {
+    const apps = use(appData)
     return (
         <>
             <section className="trending">
@@ -7,6 +12,13 @@ const Trending = () => {
                 <p className="trending-description">Explore All Trending Apps on the Market developed by us</p>
 
                 <div className="trending-container">
+                    <Suspense fallback="Loading...">
+                        {
+                            apps.map(app => {
+                                return <AppCard key={app.id} name={app.title} image={app.image} downloads={app.downloads} ratings={app.ratingAvg}></AppCard>
+                            })
+                        }
+                    </Suspense>
 
                     <div className="app-card">
                         <img src="/assets/demo-app (2).webp" alt="" className="app-image" />
