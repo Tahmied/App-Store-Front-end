@@ -3,6 +3,9 @@ import InstalledApp from "./InstalledApp";
 import Noinstallation from "./Noinstallation";
 
 function sortHighToLow(apps, setInstalledApp) {
+    if(apps.length==0){
+        return
+    }
     const sortedApps = [...apps]
     sortedApps.sort((appA, appB) => {
         return appB.size - appA.size
@@ -11,6 +14,9 @@ function sortHighToLow(apps, setInstalledApp) {
 }
 
 function sortLowToHigh(apps, setInstalledApp) {
+    if(apps.length==0){
+        return
+    }
     const sortedApps = [...apps];
     sortedApps.sort((appA, appB) => {
         return appA.size - appB.size

@@ -36,7 +36,6 @@ const AppDetails = () => {
     const allApps = use(apps)
     let appToShow = findAppById(allApps, appId.appid)
     const [isInsatlled, setIsInstalled] = useState(()=>isAppAlreadyInstalled(appId.appid))
-    console.log(isInsatlled)
     if (!appToShow) {
         return <AppNotFound></AppNotFound>
     }
