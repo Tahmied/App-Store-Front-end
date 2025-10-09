@@ -1,5 +1,6 @@
 import { use } from "react";
 import { useParams } from "react-router";
+import { installApp } from "../../Storage";
 import AppNotFound from "./AppNotFound";
 import RatingsChart from "./Ratingchart";
 
@@ -71,7 +72,7 @@ const AppDetails = () => {
                                 <p className="download-detail-num">{formatNumber(appToShow.reviews)}</p>
                             </div>
                         </div>
-                        <button className="app-install-btn">
+                        <button onClick={()=>{installApp(appToShow)}} className="app-install-btn">
                             Install Now ({appToShow.size}MB)
                         </button>
                     </div>
