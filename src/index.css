@@ -959,6 +959,18 @@ header {
     transform: translateY(-5px);
 }
 
+.no-installed-apps {
+    margin: 0 auto;
+    font-size: 3em;
+}
+
+.no-installed-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 /* footer */
 
