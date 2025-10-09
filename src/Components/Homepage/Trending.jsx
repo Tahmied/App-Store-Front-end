@@ -1,11 +1,9 @@
-import { use } from "react";
-import { Link } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import AppCard from "../AppCard";
 
-const appData = fetch('/data.json').then((res)=> res.json())
 
 const Trending = () => {
-    const apps = use(appData)
+    const apps = useLoaderData()
     const homeApps = apps.slice(0, 8);
     console.log(apps, homeApps)
     return (

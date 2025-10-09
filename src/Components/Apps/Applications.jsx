@@ -1,9 +1,9 @@
-import { use, useState } from "react";
+import { useState } from "react";
+import { useLoaderData } from "react-router";
 import styled from 'styled-components';
 import AppCard from "../AppCard";
 import AppNotFound from "../AppDetails/AppNotFound";
 
-const appData = fetch('/data.json').then((res) => res.json())
 
 function filterAppsByTitle(apps, searchTerm) {
   if (!searchTerm.trim()) return apps;
@@ -12,7 +12,7 @@ function filterAppsByTitle(apps, searchTerm) {
 }
 
 const Applications = () => {
-  const apps = use(appData)
+  const apps = useLoaderData()
   const [appsArr, setApps] = useState(() => apps)
 
   function searchApps(allApps, searchTitle) {

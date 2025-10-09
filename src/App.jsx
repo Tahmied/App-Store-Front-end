@@ -15,10 +15,10 @@ function App() {
       Component: Root,
       children: [
         {
-          index: true, Component: Home
+          index: true, Component: Home, loader: () => fetch('/data.json'),
         },
         {
-          path: 'apps', Component: Apps
+          path: 'apps', Component: Apps, loader: () => fetch('/data.json'),
         },
         {
           path: 'installation', Component: Installation
