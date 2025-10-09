@@ -670,6 +670,7 @@ body.no-scroll {
     text-align: center;
     text-transform: capitalize;
     color: #001931;
+    margin-bottom:1rem;
 }
 
 .trending-description {
