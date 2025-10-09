@@ -8,7 +8,7 @@ function sortHighToLow(apps, setInstalledApp) {
     }
     const sortedApps = [...apps]
     sortedApps.sort((appA, appB) => {
-        return appB.size - appA.size
+        return appB.downloads - appA.downloads
     })
     setInstalledApp(sortedApps)
 }
@@ -19,7 +19,7 @@ function sortLowToHigh(apps, setInstalledApp) {
     }
     const sortedApps = [...apps];
     sortedApps.sort((appA, appB) => {
-        return appA.size - appB.size
+        return appA.downloads - appB.downloads
     });
     setInstalledApp(sortedApps)
 }
@@ -36,7 +36,7 @@ const InstalledApps = ({ installedApps }) => {
                     <div className="installed-apps-tool">
                         <p className="installed-app-count">{thisInstalledApp.length} Apps Found</p>
                         <button onClick={() => setIsSortBtnOpen(!isSortBtnOpen)} className="sort-button-visual">
-                            <span>Sort By Size</span>
+                            <span>Sort By Download</span>
 
                             <img src="/assets/arro-icon.svg" alt="" className={`chevron-icon ${isSortBtnOpen ? 'open' : ''}`} />
 

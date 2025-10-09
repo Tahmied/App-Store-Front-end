@@ -83,7 +83,7 @@ const AppDetails = () => {
                                 <p className="download-detail-num">{formatNumber(appToShow.reviews)}</p>
                             </div>
                         </div>
-                        <button onClick={() => { installThisApp(appToShow) }} className="app-install-btn">
+                        <button disabled={isInsatlled} onClick={() => { installThisApp(appToShow) }} className="app-install-btn">
                             {isInsatlled ? 'Installed' : `Install Now (${appToShow.size}MB)`}
                         </button>
                     </div>
@@ -91,7 +91,7 @@ const AppDetails = () => {
                 <hr className="app-details-below-hr" />
                 <div className="rating-section">
                     <p className="ratings-section-title">Ratings</p>
-                    <RatingsChart ratingdata={appToShow.ratings}></RatingsChart>
+                    <RatingsChart ratingdata={appToShow.ratings.slice().reverse()}></RatingsChart>
                 </div>
                 <hr className="app-details-below-hr" />
                 <div className="app-details-description">

@@ -509,6 +509,15 @@ header {
     color: #627382;
 }
 
+.app-hero-description-installatoin {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: #627382;  
+}
+
 .apps-tools {
     display: flex;
     justify-content: space-between;
@@ -804,7 +813,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 155px;
+    width: 200px;
     padding: 10px 15px;
     background-color: #f8f9fa;
     border: 1px solid #dee2e6;
