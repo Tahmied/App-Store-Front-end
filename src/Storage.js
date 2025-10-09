@@ -28,3 +28,10 @@ export function isAppAlreadyInstalled(appId) {
   const convertId = parseInt(appId, 10);
   return installedApps.some(app => app.id === convertId);
 }
+
+export function uninstallApp(appId) {
+  const installedApps = getInstalledApps();
+  const convertedId = parseInt(appId, 10);
+  const updatedApps = installedApps.filter(app => app.id !== convertedId);
+  localStorage.setItem('installedApps', JSON.stringify(updatedApps));
+}

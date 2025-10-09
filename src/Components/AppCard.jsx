@@ -29,7 +29,7 @@ const AppCard = ({image, name, downloads, ratings, id}) => {
             <p className="app-name">{name}</p>
             <div className="app-states">
                 <div className="app-downloads">
-                    <img src="/assets/icon-downloads.png" alt="" className="download-icon" /> {formatNumber(downloads)}
+                    <img src="/assets/installed-app-download.svg" alt="" className="download-icon" /> {formatNumber(downloads)}
                 </div>
                 <div className="app-ratings">
                     <img src="/assets/icon-ratings.png" alt="" className="rating-icon" /> {ratings}

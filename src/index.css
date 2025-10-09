@@ -746,11 +746,13 @@ header {
 .installed-apps-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     flex-direction: column;
     gap: 1rem;
     max-width: 1300px;
     margin: 0 auto;
+    width: 100%;
+    padding-bottom: 2rem;
 }
 
 .installed-apps-tool {
@@ -842,6 +844,121 @@ header {
 .chevron-icon.open {
   transform: rotate(180deg);
 }
+
+.installed-app-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    gap: 16px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.installed-app-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.installed-app-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+}
+
+.installed-app-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.installed-app-name {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: capitalize;
+    color: #001931;
+}
+
+.installed-app-states {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.installed-app-downloads {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #00D390;
+}
+
+.installed-app-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #FF8811;
+}
+
+.installed-app-ratings {
+    height: 15px;
+    width: 15px;
+}
+
+.installed-app-size {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: capitalize;
+    color: #627382;
+}
+
+.uninstall-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 10px;
+    width: 100px;
+    height: 43px;
+    background: #00D390;
+    border-radius: 4px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.uninstall-btn:hover {
+    transform: translateY(-5px);
+}
+
 
 /* footer */
 

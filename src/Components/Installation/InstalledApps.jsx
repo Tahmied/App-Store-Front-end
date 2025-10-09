@@ -1,8 +1,9 @@
 import { useState } from "react";
+import InstalledApp from "./InstalledApp";
 
 const InstalledApps = ({ installedApps }) => {
     const [isSortBtnOpen, setIsSortBtnOpen] = useState(false)
-    console.log(installedApps)
+    const [thisInstalledApp, setInstalledApp] = useState(()=>installedApps)
     return (
         <>
             <section className="installed-apps">
@@ -12,7 +13,7 @@ const InstalledApps = ({ installedApps }) => {
                         <button onClick={() => setIsSortBtnOpen(!isSortBtnOpen)} className="sort-button-visual">
                             <span>Sort By Size</span>
 
-                            <img src="/public/assets/arro-icon.svg" alt="" className={`chevron-icon ${isSortBtnOpen ? 'open' : ''}`}/>
+                            <img src="/public/assets/arro-icon.svg" alt="" className={`chevron-icon ${isSortBtnOpen ? 'open' : ''}`} />
 
                             {isSortBtnOpen && (
                                 <ul className="dropdown-menu">
@@ -22,6 +23,13 @@ const InstalledApps = ({ installedApps }) => {
                             )}
                         </button>
 
+                    </div>
+                    <div className="installed-apps-container">
+                        {
+                            thisInstalledApp.map((app) => {
+                                return <InstalledApp thisInstalledApp={thisInstalledApp} setInstalledApp={setInstalledApp} image={app.image} appName={app.title} downloads={app.downloads} ratings={app.ratingAvg} appSize={app.size} appId={app.id} key={app.id}></InstalledApp>
+                            })
+                        }
                     </div>
                 </div>
             </section>
