@@ -2,10 +2,21 @@ import { useState } from "react";
 import InstalledApp from "./InstalledApp";
 import Noinstallation from "./Noinstallation";
 
+function sortHighToLow(apps, setInstalledApp) {
+    console.log(`in the sort fun`)
+    const sortedApps = [...apps]
+    sortedApps.sort((appA, appB) =>{
+        console.log(appB.size - appA.size)
+        return  appB.size - appA.size
+    })
+    console.log(sortedApps)
+    setInstalledApp(sortedApps)
+}
+
 const InstalledApps = ({ installedApps }) => {
     const [isSortBtnOpen, setIsSortBtnOpen] = useState(false)
     const [thisInstalledApp, setInstalledApp] = useState(() => installedApps)
-    
+
 
     return (
         <>
@@ -20,8 +31,8 @@ const InstalledApps = ({ installedApps }) => {
 
                             {isSortBtnOpen && (
                                 <ul className="dropdown-menu">
-                                    <li>Low to High</li>
-                                    <li>High to Low</li>
+                                    <li onClick={()=> sortHighToLow(thisInstalledApp, setInstalledApp)}>Low to High</li>
+                                    <li onClick={()=> sortHighToLow(thisInstalledApp, setInstalledApp)}>High to Low</li>
                                 </ul>
                             )}
                         </button>
