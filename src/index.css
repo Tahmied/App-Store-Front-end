@@ -949,7 +949,8 @@ body.no-scroll {
 
 .app-details-description {
     max-width: 1300px;
-    margin: 0 auto
+    margin: 0 auto;
+    width: 80%;
 }
 
 .description-heading {
@@ -991,6 +992,9 @@ body.no-scroll {
     grid-template-columns: 1fr 2fr;
     max-width: 1300px;
     margin: 2rem auto;
+    width: 80%;
+    gap: 2rem;
+    align-items: center;
 }
 
 .app-details-right {
@@ -1082,6 +1086,7 @@ body.no-scroll {
     text-transform: capitalize;
     color: #001931;
     opacity: 0.8;
+    text-align: center;
 }
 
 .download-detail-num {
@@ -1094,7 +1099,7 @@ body.no-scroll {
 }
 
 .app-details-below-hr {
-    width: 90%;
+    width: 80%;
     margin: 2rem auto;
 }
 
@@ -1105,6 +1110,7 @@ body.no-scroll {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    width: 80%;
 }
 
 .ratings-section-title {
@@ -1117,10 +1123,66 @@ body.no-scroll {
 
 .ratings-chart {
     height: 100%;
-    width: 100%;
+    width: 80%;
     position: relative;
     left: -30px;
     padding-top: 1rem;
+}
+
+@media (max-width:948px) {
+    .app-details-icon-img {
+        width: auto;
+    }
+}
+
+@media (max-width:850px) {
+    .download-detail-num {
+        font-size: 25px;
+    }
+}
+
+@media (max-width:768px) {
+    .app-details-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .app-details-icon-img {
+        width: 350px;
+    }
+
+    .app-install-btn {
+        margin: 1.5rem auto;
+    }
+
+    .app-details-states {
+        gap: 10px;
+    }
+}
+
+@media (max-width:370px) {
+    .app-details-icon-img {
+        width: auto;
+    }
+    .app-details-states {
+        flex-direction: column;
+    }
+    .app-name-title {
+        text-align: center;
+    }
+    .app-developed-by {
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .app-details-line {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 
 /* 404 page */
@@ -1202,7 +1264,7 @@ body.no-scroll {
     gap: 1rem;
     max-width: 1300px;
     margin: 0 auto;
-    width: 100%;
+    width: 80%;
     padding-bottom: 2rem;
 }
 
@@ -1294,6 +1356,15 @@ body.no-scroll {
 
 .chevron-icon.open {
   transform: rotate(180deg);
+}
+
+.installed-apps-items-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
 .installed-app-item {
@@ -1421,7 +1492,38 @@ body.no-scroll {
     align-items: center;
 }
 
+@media (max-width:600px) {
+    .installed-app-item {
+        flex-direction: column;
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    .installed-app-left {
+        flex-direction: column;
+    }
+    .installed-app-icon {
+        width: 100%;
+        height: auto;
+    }
+    .installed-app-name {
+        text-align: center;
+    }
+    .app-hero-title {
+        font-size: 25px;
+    }
+    .app-hero-description-installatoin {
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
 
+@media (max-width:460px) {
+    .installed-apps-tool {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
 
 /* footer */
 
@@ -1579,4 +1681,11 @@ footer {
 
 .footer-right {
     font-size: 1.2em;
+}
+
+
+@media (max-width:768px) {
+    .no-installed-apps {
+        font-size: 2em;
+    }
 }

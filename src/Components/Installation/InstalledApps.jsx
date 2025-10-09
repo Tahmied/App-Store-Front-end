@@ -49,7 +49,7 @@ const InstalledApps = ({ installedApps }) => {
                         </button>
 
                     </div>
-                    <div className="installed-apps-container">
+                    <div className="installed-apps-items-container">
                         {
                             thisInstalledApp.length > 0 ? thisInstalledApp.map((app) => {
                                 return <InstalledApp thisInstalledApp={thisInstalledApp} setInstalledApp={setInstalledApp} image={app.image} appName={app.title} downloads={app.downloads} ratings={app.ratingAvg} appSize={app.size} appId={app.id} key={app.id}></InstalledApp>
