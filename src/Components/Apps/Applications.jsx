@@ -1,6 +1,7 @@
 import { use, useState } from "react";
 import styled from 'styled-components';
 import AppCard from "../AppCard";
+import AppNotFound from "../AppDetails/AppNotFound";
 
 const appData = fetch('/data.json').then((res) => res.json())
 
@@ -50,9 +51,7 @@ const Applications = () => {
 
             appsArr.length > 0 ? appsArr.map(app => {
               return <AppCard id={app.id} key={app.id} name={app.title} image={app.image} downloads={app.downloads} ratings={app.ratingAvg}></AppCard>
-            }) : <div className="no-apps-there">
-              <p className="no-apps-found">No apps found</p>
-            </div>
+            }) : <AppNotFound></AppNotFound>
 
           }
         </div>

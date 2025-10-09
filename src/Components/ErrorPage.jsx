@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-const AppNotFound = () => {
+const PageNotFound = () => {
     return (
         <div className='app-not-found'>
             <div className="app-not-found-container">
@@ -15,4 +15,4 @@ const AppNotFound = () => {
     );
 };
 
-export default AppNotFound;
+export default PageNotFound;
