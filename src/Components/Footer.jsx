@@ -1,5 +1,7 @@
+import { useNavigation } from "react-router";
 
 const Footer = () => {
+    const navigate = useNavigation()
     return (
         <>
             <footer>
@@ -12,16 +14,16 @@ const Footer = () => {
 
                     <div className='footer-menu'>
                         <ul className="footer-nav-list">
-                            <li className="footer-nav-item">Home</li>
-                            <li className="footer-nav-item">Apps</li>
-                            <li className="footer-nav-item">Installation</li>
-                            <li className="footer-nav-item">Contribute</li>
+                            <li onClick={()=> navigate('/')} className="footer-nav-item">Home</li>
+                            <li onClick={()=> navigate('/apps')} className="footer-nav-item">Apps</li>
+                            <li onClick={()=> navigate('/Installation')} className="footer-nav-item">Installation</li>
+                            <li onClick={()=> window.open('https://github.com/tahmied','_blank')} className="footer-nav-item">Contribute</li>
                         </ul>
                     </div>
 
 
                     <div className="social-login-icons">
-                        <div className="socialcontainer">
+                        <div onClick={()=> window.open('https://x.com/tahmiedhossain','_blank')} className="socialcontainer">
                             <div className="icon social-icon-1-1">
                                 <svg
                                     viewBox="0 0 512 512"
@@ -49,7 +51,7 @@ const Footer = () => {
                                 </svg>
                             </div>
                         </div>
-                        <div className="socialcontainer">
+                        <div onClick={()=> window.open('https://www.instagram.com/tahmied_hossain/','_blank')} className="socialcontainer">
                             <div className="icon social-icon-2-2">
                                 <svg
                                     fill="white"
@@ -77,7 +79,7 @@ const Footer = () => {
                                 </svg>
                             </div>
                         </div>
-                        <div className="socialcontainer">
+                        <div onClick={()=> window.open('https://www.facebook.com/profile.php?id=61579580110957','_blank')} className="socialcontainer">
                             <div className="icon social-icon-3-3">
                                 <svg
                                     viewBox="0 0 384 512"
@@ -103,7 +105,7 @@ const Footer = () => {
                                 </svg>
                             </div>
                         </div>
-                        <div className="socialcontainer">
+                        <div onClick={()=> window.open('https://github.com/tahmied','_blank')} className="socialcontainer">
                             <div className="icon social-icon-4-4">
                                 <svg fill="white" viewBox="0 0 496 512" height="1.6em">
                                     <path

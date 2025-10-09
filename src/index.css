@@ -401,6 +401,25 @@ header {
     color: #FF8811;
 }
 
+.all-applications {
+    position: relative;
+}
+
+.no-apps-there {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+}
+
+.no-apps-found {
+    margin: 0 auto;
+    font-size: 1.2em;
+}
+
 @media (max-width: 1024px) {
     .trending-container {
         grid-template-columns: 1fr 1fr;
@@ -1003,6 +1022,10 @@ footer {
 
 .footer-nav-item {
     cursor: pointer;
+}
+
+.footer-nav-item:hover {
+    color: white;
 }
 
 .social-login-icons {

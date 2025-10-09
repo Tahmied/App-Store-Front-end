@@ -5,56 +5,60 @@ import AppCard from "../AppCard";
 const appData = fetch('/data.json').then((res) => res.json())
 
 function filterAppsByTitle(apps, searchTerm) {
-    if (!searchTerm.trim()) return apps;
-    const lower = searchTerm.toLowerCase();
-    return apps.filter(app => app.title.toLowerCase().includes(lower));
+  if (!searchTerm.trim()) return apps;
+  const lower = searchTerm.toLowerCase();
+  return apps.filter(app => app.title.toLowerCase().includes(lower));
 }
 
 const Applications = () => {
-    const apps = use(appData)
-    const [appsArr, setApps] = useState(() => apps)
+  const apps = use(appData)
+  const [appsArr, setApps] = useState(() => apps)
 
-    function searchApps(allApps, searchTitle) {
-        const filteredApps = filterAppsByTitle(allApps, searchTitle)
-        setApps(filteredApps)
-    }
+  function searchApps(allApps, searchTitle) {
+    const filteredApps = filterAppsByTitle(allApps, searchTitle)
+    setApps(filteredApps)
+  }
 
-    return (
-        <>
-            <section className="all-applications">
-                <div className="apps-tools">
-                    <p className="app-count">{apps.length} Apps Found</p>
-                    <StyledWrapper>
-                        <form onChange={(e) => { searchApps(apps, e.target.value) }} className="form">
-                            <label htmlFor="search">
-                                <input required autoComplete="off" placeholder="Search Apps" id="search" type="text" />
-                                <div className="icon">
-                                    <svg strokeWidth={2} stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="swap-on">
-                                        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" strokeLinejoin="round" strokeLinecap="round" />
-                                    </svg>
-                                    <svg strokeWidth={2} stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="swap-off">
-                                        <path d="M10 19l-7-7m0 0l7-7m-7 7h18" strokeLinejoin="round" strokeLinecap="round" />
-                                    </svg>
-                                </div>
-                                <button type="reset" className="close-btn">
-                                    <svg viewBox="0 0 20 20" className="h-5 w-5" xmlns="http://www.w3.org/2000/svg">
-                                        <path clipRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" fillRule="evenodd" />
-                                    </svg>
-                                </button>
-                            </label>
-                        </form>
-                    </StyledWrapper>
+  return (
+    <>
+      <section className="all-applications">
+        <div className="apps-tools">
+          <p className="app-count">({apps.length}) Apps Found</p>
+          <StyledWrapper>
+            <form onChange={(e) => { searchApps(apps, e.target.value) }} className="form">
+              <label htmlFor="search">
+                <input required autoComplete="off" placeholder="Search Apps" id="search" type="text" />
+                <div className="icon">
+                  <svg strokeWidth={2} stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="swap-on">
+                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" strokeLinejoin="round" strokeLinecap="round" />
+                  </svg>
+                  <svg strokeWidth={2} stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="swap-off">
+                    <path d="M10 19l-7-7m0 0l7-7m-7 7h18" strokeLinejoin="round" strokeLinecap="round" />
+                  </svg>
                 </div>
-                <div className="trending-container">
-                    {
-                        appsArr.map(app => {
-                            return <AppCard id={app.id} key={app.id} name={app.title} image={app.image} downloads={app.downloads} ratings={app.ratingAvg}></AppCard>
-                        })
-                    }
-                </div>
-            </section>
-        </>
-    );
+                <button type="reset" className="close-btn">
+                  <svg viewBox="0 0 20 20" className="h-5 w-5" xmlns="http://www.w3.org/2000/svg">
+                    <path clipRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" fillRule="evenodd" />
+                  </svg>
+                </button>
+              </label>
+            </form>
+          </StyledWrapper>
+        </div>
+        <div className="trending-container">
+          {
+
+            appsArr.length > 0 ? appsArr.map(app => {
+              return <AppCard id={app.id} key={app.id} name={app.title} image={app.image} downloads={app.downloads} ratings={app.ratingAvg}></AppCard>
+            }) : <div className="no-apps-there">
+              <p className="no-apps-found">No apps found</p>
+            </div>
+
+          }
+        </div>
+      </section>
+    </>
+  );
 };
 
 

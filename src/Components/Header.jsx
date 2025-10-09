@@ -1,12 +1,13 @@
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 
 const Header = () => {
+    const navigate = useNavigate()
     return (
         <>
         <header>
             <div className="header-container">
             
-                <div className='logo'>
+                <div onClick={()=> navigate('/')} className='logo'>
                     <img src="/assets/logo.png" alt="" className="logo-icon" />
                     <span className="logo-text">HERO.IO</span>
                 </div>
@@ -20,7 +21,7 @@ const Header = () => {
                 </div>
 
                 <div className="header-cta">
-                    <button className="header-cta-btn">
+                    <button onClick={()=> window.open('https://www.github.com/tahmied' , '_blank')} className="header-cta-btn">
                         <img src="/assets/github-logo.svg" alt="" className="header-cta-img" />
                         Contribute
                     </button>
