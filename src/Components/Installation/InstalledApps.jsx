@@ -38,7 +38,7 @@ const InstalledApps = ({ installedApps }) => {
                         <button onClick={() => setIsSortBtnOpen(!isSortBtnOpen)} className="sort-button-visual">
                             <span>Sort By Size</span>
 
-                            <img src="/public/assets/arro-icon.svg" alt="" className={`chevron-icon ${isSortBtnOpen ? 'open' : ''}`} />
+                            <img src="/assets/arro-icon.svg" alt="" className={`chevron-icon ${isSortBtnOpen ? 'open' : ''}`} />
 
                             {isSortBtnOpen && (
                                 <ul className="dropdown-menu">

@@ -1,5 +1,6 @@
 import { use, useState } from "react";
 import { useParams } from "react-router";
+import Swal from "sweetalert2";
 import { installApp, isAppAlreadyInstalled } from "../../Storage";
 import AppNotFound from "./AppNotFound";
 import RatingsChart from "./Ratingchart";
@@ -35,7 +36,7 @@ const AppDetails = () => {
     const appId = useParams()
     const allApps = use(apps)
     let appToShow = findAppById(allApps, appId.appid)
-    const [isInsatlled, setIsInstalled] = useState(()=>isAppAlreadyInstalled(appId.appid))
+    const [isInsatlled, setIsInstalled] = useState(() => isAppAlreadyInstalled(appId.appid))
     if (!appToShow) {
         return <AppNotFound></AppNotFound>
     }
@@ -47,6 +48,11 @@ const AppDetails = () => {
     function installThisApp(appToInstall) {
         setIsInstalled(true)
         installApp(appToInstall)
+        Swal.fire({
+            title: `<strong>${appToInstall.title} Is Installed</strong>`, 
+            html: '<i>You can find it in Installation page!</i>',
+            icon: 'success',
+        });
     }
 
     return (
@@ -62,17 +68,17 @@ const AppDetails = () => {
                         <hr className="app-details-line" />
                         <div className="app-details-states">
                             <div className="downloads-states">
-                                <img src="/public/assets/icon-downloads.png" alt="" className="download-details" />
+                                <img src="/assets/icon-downloads.png" alt="" className="download-details" />
                                 <p className="download-detail-tag">Downloads</p>
                                 <p className="download-detail-num">{formatNumber(appToShow.downloads)}</p>
                             </div>
                             <div className="downloads-states">
-                                <img src="/public/assets/icon-ratings.png" alt="" className="download-details" />
+                                <img src="/assets/icon-ratings.png" alt="" className="download-details" />
                                 <p className="download-detail-tag">Average Ratings</p>
                                 <p className="download-detail-num">{appToShow.ratingAvg}</p>
                             </div>
                             <div className="downloads-states">
-                                <img src="/public/assets/icon-review.png" alt="" className="download-details" />
+                                <img src="/assets/icon-review.png" alt="" className="download-details" />
                                 <p className="download-detail-tag">Total Reviews</p>
                                 <p className="download-detail-num">{formatNumber(appToShow.reviews)}</p>
                             </div>

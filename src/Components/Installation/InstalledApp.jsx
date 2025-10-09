@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import { uninstallApp } from "../../Storage";
 
 function formatNumber(num) {
@@ -20,12 +21,17 @@ function formatNumber(num) {
     return num.toString();
 }
 
-function appToUninstall(appId, thisInstalledApp, setInstalledApp) {
+function appToUninstall(appId, thisInstalledApp, setInstalledApp, appName) {
     let currentInstalledApps = [...thisInstalledApp]
     const convertedId = parseInt(appId, 10);
     const updatedApps = currentInstalledApps.filter(app => app.id !== convertedId);
     setInstalledApp(updatedApps)
     uninstallApp(appId)
+    Swal.fire({
+        title: `<strong>${appName} Is Uninstalled</strong>`,
+        html: '<i>You can reinstall it from apps page!</i>',
+        icon: 'success',
+    });
 }
 
 const InstalledApp = ({ image, appName, downloads, ratings, appSize, appId, thisInstalledApp, setInstalledApp }) => {
@@ -41,14 +47,14 @@ const InstalledApp = ({ image, appName, downloads, ratings, appSize, appId, this
                                 <img src="/assets/installed-app-download.svg" alt="" className="download-icon-installed" /> {formatNumber(downloads)}
                             </div>
                             <div className="installed-app-rating">
-                                <img src="/public/assets/icon-ratings.png" alt="" className="installed-app-ratings" /> {ratings}
+                                <img src="/assets/icon-ratings.png" alt="" className="installed-app-ratings" /> {ratings}
                             </div>
                             <p className="installed-app-size">{appSize} MB</p>
                         </div>
                     </div>
                 </div>
                 <div className="installed-app-right">
-                    <button onClick={() => appToUninstall(appId, thisInstalledApp, setInstalledApp)} className="uninstall-btn">Uninstall</button>
+                    <button onClick={() => appToUninstall(appId, thisInstalledApp, setInstalledApp, appName)} className="uninstall-btn">Uninstall</button>
                 </div>
             </div>
         </>
