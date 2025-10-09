@@ -21,3 +21,10 @@ export function installApp(appToInstall) {
   const updatedApps = [...currentApps, appToInstall];
   localStorage.setItem('installedApps', JSON.stringify(updatedApps))
 }
+
+
+export function isAppAlreadyInstalled(appId) {
+  const installedApps = getInstalledApps();
+  const convertId = parseInt(appId, 10);
+  return installedApps.some(app => app.id === convertId);
+}

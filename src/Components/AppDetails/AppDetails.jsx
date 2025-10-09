@@ -1,49 +1,55 @@
-import { use } from "react";
+import { use, useState } from "react";
 import { useParams } from "react-router";
-import { installApp } from "../../Storage";
+import { installApp, isAppAlreadyInstalled } from "../../Storage";
 import AppNotFound from "./AppNotFound";
 import RatingsChart from "./Ratingchart";
 
-const apps = fetch('/data.json').then((data)=>data.json())
+const apps = fetch('/data.json').then((data) => data.json())
 
 function findAppById(apps, id) {
-  const numericId = parseInt(id, 10);
-  return apps.find(app => app.id === numericId);
+    const numericId = parseInt(id, 10);
+    return apps.find(app => app.id === numericId);
 }
 
 function formatNumber(num) {
-  if (isNaN(num) || num === null) {
-    return '0';
-  }
-  if (num >= 1_000_000_000) {
-    const formattedNum = (num / 1_000_000_000).toFixed(1);
-    return parseFloat(formattedNum) + 'B';
-  }
-  if (num >= 1_000_000) {
-    const formattedNum = (num / 1_000_000).toFixed(1);
-    return parseFloat(formattedNum) + 'M';
-  }
+    if (isNaN(num) || num === null) {
+        return '0';
+    }
+    if (num >= 1_000_000_000) {
+        const formattedNum = (num / 1_000_000_000).toFixed(1);
+        return parseFloat(formattedNum) + 'B';
+    }
+    if (num >= 1_000_000) {
+        const formattedNum = (num / 1_000_000).toFixed(1);
+        return parseFloat(formattedNum) + 'M';
+    }
 
-  if (num >= 1_000) {
-    const formattedNum = (num / 1_000).toFixed(1);
-    return parseFloat(formattedNum) + 'K';
-  }
-  return num.toString();
+    if (num >= 1_000) {
+        const formattedNum = (num / 1_000).toFixed(1);
+        return parseFloat(formattedNum) + 'K';
+    }
+    return num.toString();
 }
-
 
 const AppDetails = () => {
     const appId = useParams()
     const allApps = use(apps)
     let appToShow = findAppById(allApps, appId.appid)
-    if(!appToShow) {
+    const [isInsatlled, setIsInstalled] = useState(()=>isAppAlreadyInstalled(appId.appid))
+    console.log(isInsatlled)
+    if (!appToShow) {
         return <AppNotFound></AppNotFound>
     }
-    
-    if(!Number.isInteger(Number(appId.appid))) {
+
+    if (!Number.isInteger(Number(appId.appid))) {
         return <AppNotFound></AppNotFound>
     }
-    console.log(appToShow)
+
+    function installThisApp(appToInstall) {
+        setIsInstalled(true)
+        installApp(appToInstall)
+    }
+
     return (
         <>
             <section className="app-details">
@@ -72,8 +78,8 @@ const AppDetails = () => {
                                 <p className="download-detail-num">{formatNumber(appToShow.reviews)}</p>
                             </div>
                         </div>
-                        <button onClick={()=>{installApp(appToShow)}} className="app-install-btn">
-                            Install Now ({appToShow.size}MB)
+                        <button onClick={() => { installThisApp(appToShow) }} className="app-install-btn">
+                            {isInsatlled ? 'Installed' : `Install Now (${appToShow.size}MB)`}
                         </button>
                     </div>
                 </div>
