@@ -3,13 +3,18 @@ import InstalledApp from "./InstalledApp";
 import Noinstallation from "./Noinstallation";
 
 function sortHighToLow(apps, setInstalledApp) {
-    console.log(`in the sort fun`)
     const sortedApps = [...apps]
-    sortedApps.sort((appA, appB) =>{
-        console.log(appB.size - appA.size)
-        return  appB.size - appA.size
+    sortedApps.sort((appA, appB) => {
+        return appB.size - appA.size
     })
-    console.log(sortedApps)
+    setInstalledApp(sortedApps)
+}
+
+function sortLowToHigh(apps, setInstalledApp) {
+    const sortedApps = [...apps];
+    sortedApps.sort((appA, appB) => {
+        return appA.size - appB.size
+    });
     setInstalledApp(sortedApps)
 }
 
@@ -31,8 +36,8 @@ const InstalledApps = ({ installedApps }) => {
 
                             {isSortBtnOpen && (
                                 <ul className="dropdown-menu">
-                                    <li onClick={()=> sortHighToLow(thisInstalledApp, setInstalledApp)}>Low to High</li>
-                                    <li onClick={()=> sortHighToLow(thisInstalledApp, setInstalledApp)}>High to Low</li>
+                                    <li onClick={() => sortLowToHigh(thisInstalledApp, setInstalledApp)}>Low to High</li>
+                                    <li onClick={() => sortHighToLow(thisInstalledApp, setInstalledApp)}>High to Low</li>
                                 </ul>
                             )}
                         </button>
