@@ -1,4 +1,4 @@
-# HERO.IO - Modern App Store Interface
+# HERO.IO - Modern App Store
 
 A responsive and feature-rich web application that simulates an app store, built with modern **React** and **React Router**.  
 This project demonstrates advanced front-end concepts including dynamic routing, data fetching, global state management for loading, and client-side state persistence with **localStorage**.
