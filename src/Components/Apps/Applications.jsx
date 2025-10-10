@@ -51,7 +51,7 @@ const Applications = () => {
             </form>
           </StyledWrapper>
         </div>
-        <div className="trending-container">
+        <div style={ appsArr.length === 0 ? { display: 'block' } : {} }  className="trending-container">
           {
 
             appsArr.length > 0 ? appsArr.map(app => {
