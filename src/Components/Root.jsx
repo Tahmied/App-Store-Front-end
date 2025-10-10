@@ -8,10 +8,14 @@ const Root = () => {
     return (
         <>
             <Header></Header>
-            {
-                navigation.state === 'loading'? <Loader></Loader> :<Outlet></Outlet>
-            }
-            
+            <div className="whole-site-container">
+
+                {
+                    navigation.state === 'loading' ? <Loader></Loader> : <Outlet></Outlet>
+                }
+
+
+            </div>
             <Footer></Footer>
         </>
     );
