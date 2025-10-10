@@ -1,20 +1,20 @@
 [
   {
-    "image": "/assets/demo-app (2).webp",
-    "title": "WhatsApp",
-    "companyName": "Meta Platforms, Inc.",
+    "image": "/assets/demo-app (1).webp",
+    "title": "Pomocat - Cute Pomodoro Timer",
+    "companyName": "ENFP Dev Master.",
     "id": 1,
-    "description": "Official WhatsApp mobile app for messaging and voice/video calls.",
+    "description": "Boost Your Focus with Pomocat: Cute Cat and White Noise 🌟",
     "size": 35.2,
-    "reviews": 12000000,
-    "ratingAvg": 4.3,
-    "downloads": 5000000000,
+    "reviews": 12200000,
+    "ratingAvg": 4.5,
+    "downloads": 500000,
     "ratings": [
-      { "name": "1 star", "count": 300000 },
-      { "name": "2 star", "count": 300000 },
-      { "name": "3 star", "count": 900000 },
-      { "name": "4 star", "count": 3500000 },
-      { "name": "5 star", "count": 7200000 }
+      { "name": "1 star", "count": 200000 },
+      { "name": "2 star", "count": 100000 },
+      { "name": "3 star", "count": 700000 },
+      { "name": "4 star", "count": 3000000 },
+      { "name": "5 star", "count": 8200000 }
     ]
   },
   {
@@ -24,81 +24,81 @@
     "id": 2,
     "description": "Photo and video social network with Stories, Reels and messaging.",
     "size": 150.0,
-    "reviews": 8500000,
-    "ratingAvg": 4.4,
+    "reviews": 15000000,
+    "ratingAvg": 3.8,
     "downloads": 2000000000,
     "ratings": [
-      { "name": "1 star", "count": 80000 },
-      { "name": "2 star", "count": 120000 },
-      { "name": "3 star", "count": 420000 },
-      { "name": "4 star", "count": 1700000 },
-      { "name": "5 star", "count": 6160000 }
+      { "name": "1 star", "count": 1800000 },
+      { "name": "2 star", "count": 900000 },
+      { "name": "3 star", "count": 1500000 },
+      { "name": "4 star", "count": 2800000 },
+      { "name": "5 star", "count": 8000000 }
     ]
   },
   {
-    "image": "/assets/demo-app (1).webp",
-    "title": "Spotify",
-    "companyName": "Spotify Ltd.",
+    "image": "/assets/Yorstep_logo1_420x420.png",
+    "title": "YourStep: Focus Study Calendar",
+    "companyName": "YourStep.",
     "id": 3,
-    "description": "Music and podcast streaming with personalized playlists.",
+    "description": "Increase your productivity with YourStep.",
     "size": 98.5,
-    "reviews": 3200000,
-    "ratingAvg": 4.6,
-    "downloads": 3000000000,
+    "reviews": 3500000,
+    "ratingAvg": 3.5,
+    "downloads": 100000,
     "ratings": [
-      { "name": "1 star", "count": 20000 },
-      { "name": "2 star", "count": 40000 },
-      { "name": "3 star", "count": 120000 },
-      { "name": "4 star", "count": 560000 },
-      { "name": "5 star", "count": 2400000 }
+      { "name": "1 star", "count": 800000 },
+      { "name": "2 star", "count": 300000 },
+      { "name": "3 star", "count": 400000 },
+      { "name": "4 star", "count": 500000 },
+      { "name": "5 star", "count": 1500000 }
     ]
   },
   {
     "image": "/assets/demo-app (2).webp",
-    "title": "Gmail",
-    "companyName": "Google LLC",
+    "title": "Forest: Focus for Productivity",
+    "companyName": "Seekrtech",
     "id": 4,
-    "description": "Google's email client with powerful search and spam protection.",
+    "description": "Can't stop scrolling? Lack of self-control? Forest is the solution that has the cutest focus timer to help you stay focused and boost productivity!",
     "size": 45.0,
-    "reviews": 2100000,
-    "ratingAvg": 4.2,
-    "downloads": 5000000000,
+    "reviews": 2200000,
+    "ratingAvg": 4.8,
+    "downloads": 5000000,
     "ratings": [
-      { "name": "1 star", "count": 30000 },
-      { "name": "2 star", "count": 50000 },
-      { "name": "3 star", "count": 150000 },
-      { "name": "4 star", "count": 600000 },
-      { "name": "5 star", "count": 1370000 }
+      { "name": "1 star", "count": 20000 },
+      { "name": "2 star", "count": 30000 },
+      { "name": "3 star", "count": 50000 },
+      { "name": "4 star", "count": 200000 },
+      { "name": "5 star", "count": 1900000 }
     ]
   },
   {
     "image": "/assets/demo-app (3).webp",
-    "title": "Google Maps",
-    "companyName": "Google LLC",
+    "title": "Todoist: Planner & Calendar",
+    "companyName": "Doist Inc.",
     "id": 5,
     "description": "Navigation, traffic and local business info with turn-by-turn directions.",
     "size": 120.0,
     "reviews": 4100000,
-    "ratingAvg": 4.1,
-    "downloads": 5000000000,
+    "ratingAvg": 4.6,
+    "downloads": 10000000,
     "ratings": [
-      { "name": "1 star", "count": 50000 },
-      { "name": "2 star", "count": 90000 },
-      { "name": "3 star", "count": 300000 },
-      { "name": "4 star", "count": 1200000 },
-      { "name": "5 star", "count": 2450000 }
+      { "name": "1 star", "count": 40000 },
+      { "name": "2 star", "count": 60000 },
+      { "name": "3 star", "count": 200000 },
+      { "name": "4 star", "count": 800000 },
+      { "name": "5 star", "count": 3000000 }
     ]
   },
   {
     "image": "/assets/demo-app (4).webp",
-    "title": "YouTube",
-    "companyName": "Google LLC",
+    "title": "Striving: Pomodoro study timer",
+    "companyName": "Shikudo - Walking and Focus Games",
     "id": 6,
-    "description": "Video platform for watching, uploading and streaming live content.",
+    "description": "Striving is a focus timer, a study timer, and a Pomodoro timer. It emphasis on beating phone addiction, managing ADHD, focusing on healing, and improving work productivity, self-control, and concentration through its emphasis on focus timer healing",
     "size": 85.3,
-    "reviews": 15000000,
+    "reviews": 14900000,
     "ratingAvg": 4.4,
-    "downloads": 10000000000,
+    "downloads": 500000,
     "ratings": [
       { "name": "1 star", "count": 200000 },
       { "name": "2 star", "count": 300000 },
@@ -109,110 +109,110 @@
   },
   {
     "image": "/assets/demo-app (5).webp",
-    "title": "TikTok",
-    "companyName": "ByteDance",
+    "title": "OffScreen - Less Screen Time",
+    "companyName": "Miidii Tech",
     "id": 7,
-    "description": "Short-form video platform for creation, discovery and trends.",
+    "description": "OffScreen helps you track phone usage and keeps you stay focus",
     "size": 120.7,
-    "reviews": 10200000,
-    "ratingAvg": 4.2,
-    "downloads": 3000000000,
+    "reviews": 3500000,
+    "ratingAvg": 2.1,
+    "downloads": 100000,
     "ratings": [
-      { "name": "1 star", "count": 150000 },
-      { "name": "2 star", "count": 200000 },
+      { "name": "1 star", "count": 1500000 },
+      { "name": "2 star", "count": 900000 },
       { "name": "3 star", "count": 600000 },
-      { "name": "4 star", "count": 1700000 },
-      { "name": "5 star", "count": 8200000 }
+      { "name": "4 star", "count": 300000 },
+      { "name": "5 star", "count": 200000 }
     ]
   },
   {
     "image": "/assets/demo-app (6).webp",
-    "title": "Dropbox",
-    "companyName": "Dropbox, Inc.",
+    "title": "Daily Planner, Bullet Journal",
+    "companyName": "Simple Productivity Apps",
     "id": 8,
-    "description": "Cloud storage, file sync and collaboration tools.",
+    "description": "Welcome to daily planner & bullet journaling app, your all-in-one solution to seamlessly organize your daily tasks, schedule, and personal reflections. This daily planner & weekly planner app is designed to help you stay on top of your busy life, making it easier than ever to plan your day and capture your thoughts.",
     "size": 68.4,
     "reviews": 480000,
-    "ratingAvg": 4.1,
-    "downloads": 1000000000,
+    "ratingAvg": 4.5,
+    "downloads": 1000000,
     "ratings": [
       { "name": "1 star", "count": 8000 },
       { "name": "2 star", "count": 12000 },
-      { "name": "3 star", "count": 50000 },
-      { "name": "4 star", "count": 100000 },
+      { "name": "3 star", "count": 30000 },
+      { "name": "4 star", "count": 120000 },
       { "name": "5 star", "count": 310000 }
     ]
   },
   {
-    "image": "/assets/demo-app (6).webp",
-    "title": "Slack",
-    "companyName": "Slack Technologies (Salesforce)",
+    "image": "/assets/notion.webp",
+    "title": "Notion: Notes, Tasks, AI",
+    "companyName": "Notion Labs, Inc.",
     "id": 9,
-    "description": "Team collaboration and messaging with channels and integrations.",
-    "size": 82.0,
-    "reviews": 950000,
-    "ratingAvg": 4.3,
-    "downloads": 80000000,
-    "ratings": [
-      { "name": "1 star", "count": 10000 },
-      { "name": "2 star", "count": 15000 },
-      { "name": "3 star", "count": 60000 },
-      { "name": "4 star", "count": 210000 },
-      { "name": "5 star", "count": 665000 }
-    ]
-  },
-  {
-    "image": "/assets/demo-app (6).webp",
-    "title": "Zoom",
-    "companyName": "Zoom Video Communications",
-    "id": 10,
-    "description": "Video conferencing, webinars and remote collaboration tool.",
-    "size": 60.2,
-    "reviews": 4200000,
-    "ratingAvg": 4.0,
-    "downloads": 1000000000,
-    "ratings": [
-      { "name": "1 star", "count": 80000 },
-      { "name": "2 star", "count": 120000 },
-      { "name": "3 star", "count": 400000 },
-      { "name": "4 star", "count": 900000 },
-      { "name": "5 star", "count": 2810000 }
-    ]
-  },
-  {
-    "image": "/assets/demo-app (6).webp",
-    "title": "Netflix",
-    "companyName": "Netflix, Inc.",
-    "id": 11,
-    "description": "Streaming service for movies, TV series and original content.",
-    "size": 220.0,
-    "reviews": 7800000,
-    "ratingAvg": 4.3,
-    "downloads": 1000000000,
-    "ratings": [
-      { "name": "1 star", "count": 60000 },
-      { "name": "2 star", "count": 90000 },
-      { "name": "3 star", "count": 340000 },
-      { "name": "4 star", "count": 1300000 },
-      { "name": "5 star", "count": 6180000 }
-    ]
-  },
-  {
-    "image": "/assets/demo-app (6).webp",
-    "title": "Reddit",
-    "companyName": "Reddit, Inc.",
-    "id": 12,
-    "description": "Community discussion platform featuring subreddits and threaded comments.",
-    "size": 36.7,
-    "reviews": 2500000,
+    "description": "Notion is a productivity app where you can write, plan, and organize your notes, projects, tasks and more",
+    "size": 68.4,
+    "reviews": 480000,
     "ratingAvg": 4.1,
-    "downloads": 1000000000,
+    "downloads": 10000000,
     "ratings": [
-      { "name": "1 star", "count": 40000 },
-      { "name": "2 star", "count": 60000 },
-      { "name": "3 star", "count": 220000 },
-      { "name": "4 star", "count": 720000 },
-      { "name": "5 star", "count": 1430000 }
+      { "name": "1 star", "count": 35000 },
+      { "name": "2 star", "count": 25000 },
+      { "name": "3 star", "count": 50000 },
+      { "name": "4 star", "count": 100000 },
+      { "name": "5 star", "count": 270000 }
+    ]
+  },
+  {
+    "image": "/assets/ticktick.webp",
+    "title": "TickTick:To Do List & Calendar",
+    "companyName": "TickTick Limited",
+    "id": 10,
+    "description": "TickTick is your personal productivity powerhouse, expertly designed to simplify your life and supercharge your efficiency",
+    "size": 68.4,
+    "reviews": 480000,
+    "ratingAvg": 4.7,
+    "downloads": 5000000,
+    "ratings": [
+      { "name": "1 star", "count": 5000 },
+      { "name": "2 star", "count": 5000 },
+      { "name": "3 star", "count": 20000 },
+      { "name": "4 star", "count": 100000 },
+      { "name": "5 star", "count": 350000 }
+    ]
+  },
+  {
+    "image": "/assets/todolist.webp",
+    "title": "To-Do List - Schedule Planner",
+    "companyName": "Dairy App & Notes & Audio Editor & Voice Recorder",
+    "id": 11,
+    "description": "Do List - Schedule Planner & To Do List Task Manager is a free and easy online to-do list manager and schedule planner app",
+    "size": 68.4,
+    "reviews": 628000,
+    "ratingAvg": 4.7,
+    "downloads": 10000000,
+    "ratings": [
+      { "name": "1 star", "count": 6000 },
+      { "name": "2 star", "count": 10000 },
+      { "name": "3 star", "count": 40000 },
+      { "name": "4 star", "count": 122000 },
+      { "name": "5 star", "count": 450000 }
+    ]
+  },
+  {
+    "image": "/assets/microsoft todo.png",
+    "title": "Microsoft To Do: Lists & Tasks",
+    "companyName": "Microsoft Corporation",
+    "id": 12,
+    "description": "Microsoft To Do is a task management app to help you stay organized and manage your day-to-day.",
+    "size": 68.4,
+    "reviews": 446000,
+    "ratingAvg": 4.2,
+    "downloads": 10000000,
+    "ratings": [
+      { "name": "1 star", "count": 30000 },
+      { "name": "2 star", "count": 24000 },
+      { "name": "3 star", "count": 52000 },
+      { "name": "4 star", "count": 100000 },
+      { "name": "5 star", "count": 240000 }
     ]
   }
 ]
